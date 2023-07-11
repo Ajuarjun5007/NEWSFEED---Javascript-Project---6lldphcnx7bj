@@ -1,1 +1,94 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesnf.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="bgimage"></div>
+
+    <div id="main">
+     <!-- dashbaord page -->
+        <div class="dashboard">
+            <!-- title -->
+                
+                <div class="title">
+                    <h1>The voice.</h1>
+                </div>
+                <!-- <div class="logo">
+                    <img src="./mike-in-hand.webp" alt="">
+                </div> -->
+            </div>
+            <!-- saved & recent buttons -->
+           
+            <div class="button-types">
+                <div class="toggle">
+                    <button id="sidebar">☰ More</button>
+                </div>  
+                 <div class="newsbtn">
+                 <button  class="news-btn" onclick="showFavourites()" >saved news</button>
+                <button class="news-btn">recent news</button>
+             </div>
+            </div>
+    
+   
+    <div class="category-bar">
+        <button class="category All">All</button>
+        <button class="category business">business</button>
+        <button class="category sports">sports</button>
+        <button class="category world">world</button>
+        <button class="category politics">politics</button>
+        <button class="category hatke">hatke</button>
+        <button class="category science">science</button>
+     </div>
+
+     <div class="news-bar">
+        <!-- <div class="news-item">
+            <div class="news-title">
+                <p>by arjun</p>
+                <p>category politics</p>
+            </div>
+            <div class="news-content">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus,
+                dolores sapiente quae consectetur sint laboriosam possimus vitae officiis 
+                deserunt impedit eaque dolorum,
+                 pariatur illum recusandae, inventore autem dignissimos similique animi?
+            </div>
+        </div>
+        <i class="fa-regular fa-heart"></i> -->
+      </div>
+    </div>
+
+    <div id="mySidebar" class="sidebar">
+        <div class="logo">
+                    <img src="./mike-in-hand.webp" alt="">
+                 </div> 
+        <a  class="closebtn" onclick="closeNav()">×</a>
+        <div class="sidebar-menu">
+            <a href="https://everipedia.org/wiki/lang_en/Inshorts">About</a>
+            <a id="loginaccess" href="#" onclick="loginopen()">login/signup</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+      </div>
+      <div id="login">
+        <form action="">
+            <h1>login</h1>
+            <div class="emailinput">
+            <label for="email">Email:</label>
+            <input type="email" name="email"></input>
+            </div>
+            <div class="password">
+             <label for="password">Password:</label>
+            <input type="password" name="password" minlength="8" required></input>
+            </div>
+        </form>
+      </div>
+
+    <script src="./scriptnf.js"></script>
+</body>
+</html>
