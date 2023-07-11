@@ -3,17 +3,7 @@ html,body{
     background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
     background-image: url("./8k.jpeg");
 }
-.bgimage{
-    filter: blur(8px);
-    z-index: -1;
-    -webkit-filter: blur(8px);
-    height: 100%; 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 
-}
 
 
 .dashboard{
