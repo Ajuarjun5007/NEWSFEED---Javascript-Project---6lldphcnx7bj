@@ -1,4 +1,3 @@
-let savednews={}
 let savedarray=[]
 const allCategoryUrl =
   "https://content.newtonschool.co/v1/pr/64806cf8b7d605c99eecde47/news";
@@ -20,23 +19,42 @@ async function getApiData(url) {
 }
 
 
-function createCards(dataArray) {
+function createCards(dataArray, type="main") {
   // console.log(dataArray);
   cardContainer.innerHTML="";
-  dataArray.map((item) => {
-    cardContainer.innerHTML += 
-    `<div class="news-item">
-        <div class="news-title">
-        <p>by ${item[" author"]}</p>
-        <p>category ${item[" category"]}</p>
-        </div>
-        <div class="news-content">
-                <p>${item.content}</p>
-                <a href="${item.url}">Read More</a></div>
-                <i id="${item[" category"]}" class="fa-solid fa-heart"></i>
-                </div>
-                </div>`;
-  });
+  if(type=="main"){
+    dataArray.map((item) => {
+      cardContainer.innerHTML += 
+      `<div class="news-item">
+          <div class="news-title">
+          <p>by ${item[" author"]}</p>
+          <p>category ${item[" category"]}</p>
+          </div>
+          <div class="news-content">
+                  <p>${item.content}</p>
+                  <a href="${item.url}">Read More</a></div>
+                  <i class="fa-solid fa-heart"></i>
+                  </div>
+                  </div>`;
+
+    });
+  }else{
+    dataArray.map((item) => {
+      cardContainer.innerHTML += 
+      `<div class="news-item">
+          <div class="news-title">
+          <p>by ${item[" author"]}</p>
+          <p>category ${item[" category"]}</p>
+          </div>
+          <div class="news-content">
+                  <p>${item.content}</p>
+                  <a href="${item.url}">Read More</a></div>
+                  <i id="${item[" category"]}" onClick="removeFromSavedList(event)" class="fa-solid fa-circle-xmark"></i>
+                  </div>
+                  </div>`;
+
+    });
+  }
 }
 
 async function fetchAndGenerate(url, myFunction) {
@@ -125,16 +143,28 @@ function addToLocalStorage (e){
   savedarray.push(currentObject);
  localStorage.setItem("savedNews",JSON.stringify(savedarray));
 
-//   console.log(savedarray)
+  console.log(savedarray)
 // savedarray.forEach((item)=>{
 // })
  }
 function showFavourites() {
  let favourite = JSON.parse(localStorage.getItem("savedNews"));
- console.log(favourite)
- createCards(favourite)
+//  console.log(favourite)
+ createCards(favourite,"savedList");
+
+
 }
 
-function removeFromSavedList(){
-
+function removeFromSavedList(e){
+  e.stopPropagation();
+  let id = e.target.id;
+  // console.log(id, "--id");
+  newArray = savedarray.filter((item)=>{
+    // console.log(item[" category"] === id, "--item cat");
+    return item[" category"] !== id;
+  });
+  savedarray = [...newArray];
+  // console.log(newArray, "--new array");
+  localStorage.setItem("savedNews",JSON.stringify(savedarray));
+  showFavourites();
 };
