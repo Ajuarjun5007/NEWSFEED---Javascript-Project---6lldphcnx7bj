@@ -1,17 +1,17 @@
 html,body{
     font-family: "Merriweather Sans",sans-serif; 
     background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+    background-image: url("./8k.jpeg");
 }
-
 
 
 .dashboard{
     margin: 0;
     /* background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5); */
     color:#111;
-    margin: 13px;
+    margin: 18px;
     padding: auto;
-    height: 250px;
+    /* height: 25vh; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -49,9 +49,11 @@ html,body{
     border-radius: 10px;
 } 
 .toggle{
-    height: 40px;
-    width: 400px;
+    height: 5vh;
+    width: 10vw;
     left:220;
+    /* margin: auto; */
+    align-items:flex-start;
     padding-left: 30px;
     /* background-color: bisque; */
 }
@@ -61,7 +63,8 @@ html,body{
 .newsbtn{
     display:flex;
     /* background-color: aquamarine; */
-    width:70%;
+
+    width:60vw;
     justify-content: space-around;
 }
 .category-bar{
@@ -77,11 +80,14 @@ html,body{
 }
 
 .category-bar button{
-    height: 40px;
+    height: 4vh;
     border-radius: 10px;
     font-size:x-large;
-    width: 150px;
-    text-align: center;
+    width: 10vw;
+    text-align:center;
+    flex-wrap: wrap;
+    font-size: 2.5vh;
+    
 }
  button:hover{
     background-color: black;
@@ -220,8 +226,11 @@ html,body{
 
 /*  */
 /*login page styles  */
+.login-title{
+    top:100vh;
+}
 #login{
-    display: flex;
+    display: block;
     font-size: larger;
     height: 700px;
     width: 700px;
@@ -230,9 +239,46 @@ html,body{
     align-items: center;
     position: absolute;
     top: 400px;
-    left:10%;
+    left:30%;
     background-color:grey;
 }
+
+/* responsive design */
+@media (max-width:992px) {
+    .dashboard{
+        margin: 0;
+        /* background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5); */
+        color:#111;
+        margin: 13px;
+        padding: auto;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border-radius: 30px;
+        /* opacity: 0.5; */
+        /* display: block; */
+        display: none;
+    }
+    .dashboard{
+        margin: 0;
+        /* background: linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5); */
+        color:#111;
+        margin: 13px;
+        padding: auto;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border-radius: 30px;
+        /* opacity: 0.5; */
+        /* display: block; */
+        display: none;
+    }
+}
+
+
+
 
 
 
