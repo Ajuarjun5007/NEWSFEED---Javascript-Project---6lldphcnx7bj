@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./stylesnf.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <title>Document</title>
+    <title>News App</title>
 </head>
 <body>
     <div class="bgimage"></div>
@@ -31,7 +30,7 @@
                 </div>  
                  <div class="newsbtn">
                  <button  class="news-btn" onclick="showFavourites()" >saved news</button>
-                <button class="news-btn">recent news</button>
+                <button class="news-btn" onclick="removeFromSavedList()">recent news</button>
              </div>
             </div>
     
@@ -75,20 +74,24 @@
             <a href="#">Contact</a>
         </div>
       </div>
-      <div id="login">
-        <form action="">
-            <h1>login</h1>
-            <div class="emailinput">
-            <label for="email">Email:</label>
-            <input type="email" name="email"></input>
+      <!-- <div id="login">
+        <button>X</button>
+            <div class="login-title">
+                <h1>login</h1>
             </div>
-            <div class="password">
-             <label for="password">Password:</label>
-            <input type="password" name="password" minlength="8" required></input>
-            </div>
-        </form>
+            <div class="login-content">
+                <div class="emailinput">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email"></input>
+                    </div>
+                    <div class="password">
+                     <label for="password">Password:</label>
+                    <input type="password" name="password" minlength="8" required></input>
+                    </div>
+            </div> -->
+            
       </div>
 
-    <script src="./App.js"></script>
+    <script src="./scriptnf.js"></script>
 </body>
 </html>
