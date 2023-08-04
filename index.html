@@ -1,97 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <title>News App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>news web APP</title>
+  <link rel="stylesheet" href="styles2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
-<body>
-    <div class="bgimage"></div>
-
-    <div id="main">
-     <!-- dashbaord page -->
-        <div class="dashboard">
-            <!-- title -->
-                
-                <div class="title">
-                    <h1>The voice.</h1>
-                </div>
-                <!-- <div class="logo">
-                    <img src="./mike-in-hand.webp" alt="">
-                </div> -->
-            </div>
-            <!-- saved & recent buttons -->
-           
-            <div class="button-types">
-                <div class="toggle">
-                    <button id="sidebar">☰ More</button>
-                </div>  
-                 <div class="newsbtn">
-                 <button  class="news-btn" onclick="showFavourites()" >saved news</button>
-                <button class="news-btn" onclick="removeFromSavedList()">recent news</button>
-             </div>
-            </div>
-    
-   
-    <div class="category-bar">
-        <button class="category All">All</button>
-        <button class="category business">business</button>
-        <button class="category sports">sports</button>
-        <button class="category world">world</button>
-        <button class="category politics">politics</button>
-        <button class="category hatke">hatke</button>
-        <button class="category science">science</button>
-     </div>
-
-     <div class="news-bar">
-        <!-- <div class="news-item">
-            <div class="news-title">
-                <p>by arjun</p>
-                <p>category politics</p>
-            </div>
-            <div class="news-content">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus,
-                dolores sapiente quae consectetur sint laboriosam possimus vitae officiis 
-                deserunt impedit eaque dolorum,
-                 pariatur illum recusandae, inventore autem dignissimos similique animi?
-            </div>
-        </div>
-        <i class="fa-regular fa-heart"></i> -->
+<body> 
+  <nav>
+    <div class="title-logo">
+      <div class="title">
+        <h1 class="app-name">Daily <i class="fa-solid fa-globe"></i> Globe</h1>
+      </div>  
+      <div class="date-time">
+        <!-- <div class="date"</div> -->
+        <!-- <div class="time"></div> -->
       </div>
     </div>
+        <!-- <div class="bar">
+          <i class="fa-solid fa-bars" style="color:yellow;"></i>
+        </div> -->
+          
+    <div class="navbar">
+      <div class="navbar-btn">
+        <select id="countrySelect">
+          <option class="option" value="">Select Country</option>
+            <option class="option" value="in">&#x1F1EE;&#x1F1F3; India</option>
+            <option class="option" value="us">&#x1F1FA;&#x1F1F8; United States</option>
+            <option class="option"value="ae">&#x1F1E6;&#x1F1EA; United Arab Emirates</option>
+            <option class="option" value="ar">&#x1F1E6;&#x1F1F7; Argentina</option>
+            <option class="option" value="at">&#x1F1E6;&#x1F1F9; Austria</option>
+            <option class="option" value="be">&#x1F1E7;&#x1F1EA; Belgium</option>
+            <option class="option" value="bg">&#x1F1E7;&#x1F1EC; Bulgaria</option>
+            <option class="option" value="br">&#x1F1E7;&#x1F1F7; Brazil</option>
+            <option class="option" value="ca">&#x1F1E8;&#x1F1E6; Canada</option>
+            <option class="option" value="ch">&#x1F1E8;&#x1F1ED; Switzerland</option>
+            <option class="option" value="cn">&#x1F1E8;&#x1F1F3; China</option>
+            <option class="option" value="co">&#x1F1E8;&#x1F1F4; Colombia</option>
+            <option class="option" value="cu">&#x1F1E8;&#x1F1FA; Cuba</option>
+            <option class="option" value="cz">&#x1F1E8;&#x1F1FF; Czech Republic</option>
+            <option class="option" value="de">&#x1F1E9;&#x1F1EA; Germany</option>
+            <option class="option" value="eg">&#x1F1EA;&#x1F1EC; Egypt</option>
+            <option class="option" value="fr">&#x1F1EB;&#x1F1F7; France</option>
+            <option class="option" value="gb">&#x1F1EC;&#x1F1E7; United Kingdom</option>
+            <option class="option" value="gr">&#x1F1EC;&#x1F1F7; Greece</option>
+            <option class="option" value="hk">&#x1F1ED;&#x1F1F0; Hong Kong</option>
+            <option class="option" value="hu">&#x1F1ED;&#x1F1FA; Hungary</option>
+            <option class="option" value="id">&#x1F1EE;&#x1F1E9; Indonesia</option>
+            <option class="option" value="ie">&#x1F1EE;&#x1F1EA; Ireland</option>
+            <option class="option" value="il">&#x1F1EE;&#x1F1F1; Israel</option>
+            <option class="option" value="it">&#x1F1EE;&#x1F1F9; Italy</option>
+            <option class="option" value="jp">&#x1F1EF;&#x1F1F5; Japan</option>
+            <option class="option" value="kr">&#x1F1F0;&#x1F1F7; South Korea</option>
+            <option class="option" value="lt">&#x1F1F1;&#x1F1F9; Lithuania</option>
+            <option class="option" value="lu">&#x1F1F1;&#x1F1FA; Luxembourg</option>
+            <option class="option" value="ma">&#x1F1F2;&#x1F1E6; Morocco</option>
+            <option class="option" value="mx">&#x1F1F2;&#x1F1FD; Mexico</option>
+            <option class="option" value="my">&#x1F1F2;&#x1F1FE; Malaysia</option>
+            <option class="option" value="ng">&#x1F1F3;&#x1F1EC; Nigeria</option>
+            <option class="option" value="nl">&#x1F1F3;&#x1F1F1; Netherlands</option>
+            <option class="option" value="no">&#x1F1F3;&#x1F1F4; Norway</option>
+            <option class="option" value="nz">&#x1F1F3;&#x1F1FF; New Zealand</option>
+            <option class="option" value="ph">&#x1F1F5;&#x1F1ED; Philippines</option>
+            <option class="option" value="pl">&#x1F1F5;&#x1F1F1; Poland</option>
+            <option class="option" value="pt">&#x1F1F5;&#x1F1F9; Portugal</option>
+            <option class="option" value="ro">&#x1F1F7;&#x1F1F4; Romania</option>
+            <option class="option" value="ru">&#x1F1F7;&#x1F1FA; Russia</option>
+            <option class="option" value="sa">&#x1F1F8;&#x1F1E6; Saudi Arabia</option>
+            <option class="option" value="se">&#x1F1F8;&#x1F1EA; Sweden</option>
+            <option class="option" value="sg">&#x1F1F8;&#x1F1EC; Singapore</option>
+            <option class="option" value="sk">&#x1F1F8;&#x1F1F0; Slovakia</option>
+            <option class="option" value="th">&#x1F1F9;&#x1F1ED; Thailand</option>
+            <option class="option" value="tr">&#x1F1F9;&#x1F1F7; Turkey</option>
+            <option class="option" value="tw">&#x1F1F9;&#x1F1FC; Taiwan</option>
+            <option class="option" value="ua">&#x1F1FA;&#x1F1E6; Ukraine</option>
+            <option class="option" value="ve">&#x1F1FB;&#x1F1EA; Venezuela</option>
+            <option class="option" value="za">&#x1F1FF;&#x1F1E6; South Africa</option>
 
-    <div id="mySidebar" class="sidebar">
-        <div class="logo">
-                    <img src="./mike-in-hand.webp" alt="">
-                 </div> 
-        <a  class="closebtn" onclick="closeNav()">×</a>
-        <div class="sidebar-menu">
-            <a href="https://everipedia.org/wiki/lang_en/Inshorts">About</a>
-            <a id="loginaccess" href="#" onclick="loginopen()">login/signup</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+          <!-- Add other country options here -->
+        </select>
+        <button class="categry-btn" id="business"><a href="#business">Business</a></button>
+        <button class="categry-btn" id="sports"><a href="#sports">Sports</a></button>
+        <button class="categry-btn" id="entertainment"><a href="#entertainment">Entertainment</a></button>
+        <button class="categry-btn" id="technology"><a href="#technology">Technology</a></button>
+      
+       
+      
+      </div>
+     
+      <i id="login" class="fa-solid fa-user" style="color: #ecd91c;"></i>
+    
+      
+
+  </div>
+
+  </nav>
+
+  <div class="search-icon">
+    <form class="search-bar">
+      <input class="search" type="text" placeholder="search">
+      <button class="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #db0f0f;"></i></button>
+    </form>
+    <div class="bookmark-icon">
+    <button class="bookmarks">Bookmark<i class="fa-solid fa-bookmark" style="color: #ecd91c;"></i></button> 
+    </div>
+  </div>
+
+  <div class="newsbar">
+
+    <div class="newsbar-title-1">
+      <h2>Top News</h2>
+    </div>
+    <div class="mainnews-1">
+
+      <div class="maincards-1">
+      <!-- <img src="./techimage.avif" alt="">
+      <div class="para-1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      </div> -->
+
+      </div>
+
+      <div class="subcards">
+
+        <!-- <div class="subcard">
+          <img src="./techimage.avif" alt="">
+          <div class="para">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestiae sint aliquid ad suscipit voluptas doloremque fugit itaque illo natus</p>
+          </div>
+          
         </div>
+        <div class="subcard">
+          <img src="./techimage.avif" alt="">
+          <div class="para">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestiae sint aliquid ad suscipit voluptas doloremque fugit itaque illo natus</p>
+          </div>
+        </div>
+        <div class="subcard">
+          <img src="./techimage.avif" alt="">
+          <div class="para">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestiae sint aliquid ad suscipit voluptas doloremque fugit itaque illo natus</p>
+          </div>
+        </div> -->
+      
       </div>
-      <!-- <div id="login">
-        <button>X</button>
-            <div class="login-title">
-                <h1>login</h1>
-            </div>
-            <div class="login-content">
-                <div class="emailinput">
-                    <label for="email">Email:</label>
-                    <input type="email" name="email"></input>
-                    </div>
-                    <div class="password">
-                     <label for="password">Password:</label>
-                    <input type="password" name="password" minlength="8" required></input>
-                    </div>
-            </div> -->
-            
+      
+    </div>
+    <!-- Add other subcards here -->
+
+    <div class="newsbar-title-2">
+      <h2>Trending</h2>
+    </div>
+    <div class="mainnews-2">
+
+    <div class="maincards-2">
+        
+  <!-- <img src="./techimage.avif" alt="">
+  <div class="para-1">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestiae sint aliquid ad suscipit voluptas doloremque fugit itaque illo natus</p>
+  </div> -->
+    
+     </div>
+    
+      <div class="subcards-2">
+
+      <!-- <div class="subcard">
+      <img src="./techimage.avif" alt="">
+      <div class="para">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestiae sint aliquid ad suscipit voluptas doloremque fugit itaque illo natus</p>
+      </div>
       </div>
 
-    <script src="App.js"></script>
+      <div class="subcard">
+        <img src="./techimage.avif" alt="">
+        <div class="para">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestiae sint aliquid ad suscipit voluptas doloremque fugit itaque illo natus</p>
+        </div>
+        </div>
+
+        <div class="subcard">
+          <img src="./techimage.avif" alt="">
+          <div class="para">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestiae sint aliquid ad suscipit voluptas doloremque fugit itaque illo natus</p>
+          </div>
+          </div> -->
+
+       </div>
+
+    </div>
+  </div>
+
+  <!-- category cards -->
+  <div class="categorycards">
+    <div class="category-title">
+      <!-- <h3>Business</h3> -->
+    </div>
+    <div class="categorycardsdsply">
+     
+      </div>
+   </div>
+  </div>
+  <!-- footer styles -->
+  <div class="footer">
+    <h1 class="footer-title-1">Stay updated with the latest news and stories from around the world.</h1>
+    <h3 class="footer-title-2">Follow us on social media for more updates</h3>
+    <div class="footer-icons">
+      <i class="fa-brands fa-facebook" style="color: #cfc61f;"></i>
+      <i class="fa-brands fa-twitter" style="color: #cfc61f;"></i>
+      <i class="fa-brands fa-instagram" style="color: #cfc61f;"></i>
+      <i class="fa-brands fa-youtube" style="color: #cfc61f;"></i>
+    </div>
+  </div>
+
+  <!-- login form -->
+<div class="loginform">
+  <div class="forms">
+      <form id="signup-form">
+      <h2>Sign up</h2>
+      <input type="text" placeholder="Username" required></input>
+      <input type="email" placeholder="Email" required></input>
+      <input type="password" placeholder="Password" required></input>
+      <button type="submit">Sign up</button>
+      
+      </form>
+      <form id="signin-form">
+          <h2>Sign in</h2>
+          <input type="email" placeholder="Email" required></input>
+          <input type="password" placeholder="Password" required></input>
+          <button type="submit">Sign in</button>
+         
+      </form>
+      <div class="close-btn">
+        <button class="close-icon-btn">X</button>
+        </div>
+    </div>
+   
+    <div class="toggle">
+      <button id="toggle-btn">Already have an account? Sign In!</button>
+    </div>
+   
+</div>
+  <script src="./script.js"></script>
 </body>
 </html>
