@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>news web APP</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles2.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
+
 <body> 
+  <!-- navbar -->
   <nav>
     <div class="title-logo">
       <div class="title">
@@ -18,11 +20,14 @@
         <!-- <div class="time"></div> -->
       </div>
     </div>
-        <!-- <div class="bar">
-          <i class="fa-solid fa-bars" style="color:yellow;"></i>
-        </div> -->
           
     <div class="navbar">
+
+      <div id="nav-close-icon">
+        <button class="nav-closebtn">X</button>
+      </div>
+
+      <!-- Navigation bar buttons -->
       <div class="navbar-btn">
         <select id="countrySelect">
           <option class="option" value="">Select Country</option>
@@ -85,111 +90,104 @@
         <button class="categry-btn" id="entertainment"><a href="#entertainment">Entertainment</a></button>
         <button class="categry-btn" id="technology"><a href="#technology">Technology</a></button>
       
-       
-      
       </div>
+      
      
-      <i id="login" class="fa-solid fa-user" style="color: #ecd91c;"></i>
+     <div id="biguser">
+       <i class="fa-solid fa-user" style="color: #ecd91c;"></i>
+     </div>
     
+ <!-- Navigation bar buttons -->
       
 
   </div>
 
   </nav>
+  <!-- navbar -->
 
+<!-- search bar -->
   <div class="search-icon">
-    <form class="search-bar">
-      <input class="search" type="text" placeholder="search">
-      <button class="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #db0f0f;"></i></button>
-    </form>
-    <div class="bookmark-icon">
-    <button class="bookmarks">Bookmark<i class="fa-solid fa-bookmark" style="color: #ecd91c;"></i></button> 
-    </div>
+
+  <div class="hamburger">
+    <i  id ="threebar" class="fa-solid fa-bars" style="color:yellow;"></i>
   </div>
 
-  <div class="newsbar">
+  <form class="search-bar">
+     <input class="search" type="text" placeholder="search">
+     <button class="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #db0f0f;"></i></button>
+  </form>
+  <div class="bookmark-icon">
+    <button class="bookmarks">Bookmark<i class="fa-solid fa-bookmark" style="color: #ecd91c;"></i></button> 
+  </div>  
+  <div id="smalluser">
+    <i id="login"  class="fa-solid fa-user" style="color: #ecd91c;"></i>
+  </div>
 
+  </div>
+<button id="media-bookmarks" class="bookmarks">Bookmark<i class="fa-solid fa-bookmark" style="color: #ecd91c;"></i></button> 
+ <!-- search bar -->
+
+ <!-- newsbar -->
+  <div class="newsbar">
+    <!-- news-1 Title -->
     <div class="newsbar-title-1">
       <h2>Top News</h2>
     </div>
+    <!-- news-1 Title -->
+    <!-- Mainnews-1 -->
     <div class="mainnews-1">
-
-      <div class="maincards-1">
+      <!-- Bigcards-1 -->
+    <div class="maincards-1">
       <!-- <img src="./techimage.avif" alt="">
       <div class="para-1">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
       </div> -->
-
-      </div>
-
-      <div class="subcards">
-
-        <!-- <div class="subcard">
-          <img src="./techimage.avif" alt="">
-          <div class="para">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestiae sint aliquid ad suscipit voluptas doloremque fugit itaque illo natus</p>
-          </div>
-          
-        </div>
+    </div>
+      <!-- Bigcards-1 -->
+      <!-- smallcards-1 -->
+    <div class="subcards">
+      <!---
         <div class="subcard">
           <img src="./techimage.avif" alt="">
           <div class="para">
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestiae sint aliquid ad suscipit voluptas doloremque fugit itaque illo natus</p>
           </div>
-        </div>
-        <div class="subcard">
-          <img src="./techimage.avif" alt="">
-          <div class="para">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestiae sint aliquid ad suscipit voluptas doloremque fugit itaque illo natus</p>
-          </div>
-        </div> -->
-      
-      </div>
+        </div> 
+      -->
+   </div>
+      <!-- smallcards-1 -->
       
     </div>
-    <!-- Add other subcards here -->
-
+    
+    <!-- news-2 Title -->
     <div class="newsbar-title-2">
       <h2>Trending</h2>
     </div>
+    <!-- news-2 Title -->
+    <!-- Mainnews-2 -->
     <div class="mainnews-2">
-
+      <!-- Bigcards-2 -->
     <div class="maincards-2">
-        
-  <!-- <img src="./techimage.avif" alt="">
-  <div class="para-1">
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestiae sint aliquid ad suscipit voluptas doloremque fugit itaque illo natus</p>
-  </div> -->
-    
+      <!-- <img src="./techimage.avif" alt="">
+      <div class="para-1">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestiae sint aliquid ad suscipit voluptas doloremque fugit itaque illo natus</p>
+      </div> -->
      </div>
-    
+      <!-- Bigcards-2 -->
+      <!-- smallcards-2 -->
       <div class="subcards-2">
-
       <!-- <div class="subcard">
       <img src="./techimage.avif" alt="">
       <div class="para">
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestiae sint aliquid ad suscipit voluptas doloremque fugit itaque illo natus</p>
       </div>
-      </div>
-
-      <div class="subcard">
-        <img src="./techimage.avif" alt="">
-        <div class="para">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestiae sint aliquid ad suscipit voluptas doloremque fugit itaque illo natus</p>
-        </div>
-        </div>
-
-        <div class="subcard">
-          <img src="./techimage.avif" alt="">
-          <div class="para">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestiae sint aliquid ad suscipit voluptas doloremque fugit itaque illo natus</p>
-          </div>
-          </div> -->
-
+      </div>-->
        </div>
-
+      <!-- smallcards-2 -->
     </div>
+    <!-- Mainnews-2 -->
   </div>
+ <!-- newsbar -->
 
   <!-- category cards -->
   <div class="categorycards">
@@ -197,50 +195,51 @@
       <!-- <h3>Business</h3> -->
     </div>
     <div class="categorycardsdsply">
-     
-      </div>
+
+    </div>
    </div>
   </div>
-  <!-- footer styles -->
+  <!-- category cards -->
+
+  <!-- footer -->
   <div class="footer">
     <h1 class="footer-title-1">Stay updated with the latest news and stories from around the world.</h1>
     <h3 class="footer-title-2">Follow us on social media for more updates</h3>
-    <div class="footer-icons">
-      <i class="fa-brands fa-facebook" style="color: #cfc61f;"></i>
-      <i class="fa-brands fa-twitter" style="color: #cfc61f;"></i>
-      <i class="fa-brands fa-instagram" style="color: #cfc61f;"></i>
-      <i class="fa-brands fa-youtube" style="color: #cfc61f;"></i>
-    </div>
+  <div class="footer-icons">
+    <i class="fa-brands fa-facebook" style="color: #cfc61f;"></i>
+    <i class="fa-brands fa-twitter" style="color: #cfc61f;"></i>
+    <i class="fa-brands fa-instagram" style="color: #cfc61f;"></i>
+    <i class="fa-brands fa-youtube" style="color: #cfc61f;"></i>
   </div>
+  </div>
+  <!-- footer -->
 
   <!-- login form -->
-<div class="loginform">
-  <div class="forms">
+  <div class="loginform">
+    <div class="forms">
       <form id="signup-form">
       <h2>Sign up</h2>
       <input type="text" placeholder="Username" required></input>
       <input type="email" placeholder="Email" required></input>
       <input type="password" placeholder="Password" required></input>
       <button type="submit">Sign up</button>
-      
       </form>
-      <form id="signin-form">
-          <h2>Sign in</h2>
-          <input type="email" placeholder="Email" required></input>
-          <input type="password" placeholder="Password" required></input>
-          <button type="submit">Sign in</button>
-         
-      </form>
-      <div class="close-btn">
-        <button class="close-icon-btn">X</button>
-        </div>
+    <form id="signin-form">
+      <h2>Sign in</h2>
+      <input type="email" placeholder="Email" required></input>
+      <input type="password" placeholder="Password" required></input>
+      <button type="submit">Sign in</button>
+    </form>
+    <div class="close-btn">
+     <button class="close-icon-btn">X</button>
     </div>
-   
+    </div>
     <div class="toggle">
       <button id="toggle-btn">Already have an account? Sign In!</button>
     </div>
-   
-</div>
-  <script src="./App.js"></script>
+  </div>
+  <!-- login form -->
+
+  <script src="./script.js"></script>
 </body>
 </html>
